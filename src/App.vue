@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg">
     <div class="container">
+      <!-- <div > -->
       <Header />
-      <Swiper />
+      <Slide />
+      <!-- </div> -->
       <div id="nav" class="g-nav-list">
         <router-link to="/" class="g-nav-item">Home</router-link> |
         <router-link to="/about" class="g-nav-item">About</router-link> |
@@ -21,13 +23,13 @@
 
 <script>
 import Header from "./components/Header";
-import Swiper from "./components/Swiper";
+import Slide from "./components/Slide";
 
 export default {
   name: "App",
   components: {
     Header,
-    Swiper,
+    Slide,
   },
 };
 </script>
@@ -35,6 +37,8 @@ export default {
 <style>
 body {
   background: #001b36;
+  margin: 0;
+  padding: 0;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -43,10 +47,15 @@ body {
   text-align: center;
   color: #2c3e50;
 }
-.container {
-  width: 1280px;
+/* .bg {
+  width: 100%;
+  background-image: url(/images/sepa_site.png);
+  background-color: rgba(95, 95, 95, 0.8);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: contain;
   margin: 0 auto;
-}
+} */
 
 .g-nav-list {
   display: flex;
