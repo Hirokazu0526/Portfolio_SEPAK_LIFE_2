@@ -2,7 +2,7 @@
   <div class="header-wrap">
     <div class="header-inner">
       <h1 class="logo">
-        <img src="" alt="logo" />
+        <img src="@/assets/site-logo.png" alt="logo" />
       </h1>
       <h2>
         Portfolio Sepak Life
@@ -19,18 +19,25 @@ export default {
 </script>
 
 <style scoped>
+.header-wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
 .header-inner {
   display: flex;
   justify-content: space-between;
 }
 .logo {
-  width: 300px;
   height: 50px;
+}
+.logo img {
+  width: 50px;
 }
 h2 {
   display: inline-block;
-  color: white;
+  color: rgb(252, 252, 252);
   line-height: 50px;
   height: 50px;
+  font-size: 1.8em;
 }
 </style>
