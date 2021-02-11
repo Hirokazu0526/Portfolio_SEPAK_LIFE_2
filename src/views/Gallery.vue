@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>This is an Gallery page</h1>
+    <h1 class="biolet">Gallery of SEPAKTAKRAW</h1>
 
     <section class="carousel">
       <div class="carousel__main">
@@ -27,7 +27,7 @@ export default {
   name: "Gallery",
   data() {
     return {
-      active: 1,
+      active: 0,
       images: [
         {
           id: 0,
@@ -50,6 +50,84 @@ export default {
         {
           id: 3,
           img: "images/image003.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 4,
+          img: "images/image004.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 5,
+          img: "images/image005.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 6,
+          img: "images/image006.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 7,
+          img: "images/image007.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 8,
+          img: "images/image008.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 9,
+          img: "images/image009.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 10,
+          img: "images/image010.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 11,
+          img: "images/image011.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 12,
+          img: "images/image012.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 13,
+          img: "images/image013.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 14,
+          img: "images/image014.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 15,
+          img: "images/image015.jpg",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By TAKASU TSUTOMU",
+        },
+        {
+          id: 16,
+          img: "images/image016.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
           credit: "Photo By TAKASU TSUTOMU",
         },
@@ -85,8 +163,8 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  color: white;
+.biolet {
+  color: #8b16f9;
 }
 .carousel {
   width: 840px;
