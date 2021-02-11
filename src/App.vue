@@ -3,7 +3,7 @@
     <div class="container">
       <!-- <div > -->
       <Header />
-      <Slide />
+      <Video />
       <!-- </div> -->
       <div id="nav" class="g-nav-list">
         <router-link to="/" class="g-nav-item">Home</router-link> |
@@ -18,25 +18,28 @@
         <router-view />
       </transition>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
-import Slide from "./components/Slide";
+import Video from "./components/Video";
+import Footer from "./components/Footer";
 
 export default {
   name: "App",
   components: {
     Header,
-    Slide,
+    Video,
+    Footer,
   },
 };
 </script>
 
 <style>
 body {
-  background: #001b36;
+  background: #00061b;
   margin: 0;
   padding: 0;
 }
