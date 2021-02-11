@@ -1,11 +1,11 @@
 <template>
   <div class="about">
-    <h1>This is an About page</h1>
+    <h1 class="pink">This is an About page</h1>
     <section>
       <div class="container">
         <h2>My life so far</h2>
         <div class="content-info">
-          <img src="/images/image003.jpg" alt="" />
+          <img src="/images/image001.jpg" alt="" />
           <p class="text">
             小林 裕和（コバヤシ ヒロカズ）<br />
             １９８６年５月２６日生まれ<br />
@@ -20,8 +20,9 @@
           </p>
         </div>
         <div class="content-info2">
-          <img src="/images/image002.jpg" alt="" />
+          <img src="/images/image006.jpg" alt="" />
           <p class="text">
+            <span class="jttl">Job Career</span><br />
             競技と並行して会社員として勤務。<br />
             某医療機製造メーカーにて販売促進業務を担当。<br />
             オウンドメディアの運用、動画コンテンツの制作や<br />
@@ -48,6 +49,9 @@ export default {
   color: white;
   width: 1000px;
   margin: 0 auto;
+}
+.pink {
+  color: #ff04ff;
 }
 .content-info img {
   width: 50%;
@@ -87,5 +91,8 @@ export default {
   width: 500px;
   margin-right: 10px;
   line-height: 30px;
+}
+.jttl {
+  font-size: 30px;
 }
 </style>
