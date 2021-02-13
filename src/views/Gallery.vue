@@ -1,24 +1,49 @@
 <template>
-  <div>
+  <div class="gallery">
     <h1 class="biolet">Gallery of SEPAKTAKRAW</h1>
 
-    <section class="carousel">
-      <div class="carousel__main">
-        <transition name="active">
-          <div
-            class="carousel__main"
-            :key="images[active].id"
-            v-show="active === images[active].id"
-          >
-            <img :src="images[active].img" />
+    <div class="container">
+      <ul class="carousel__thumbnails">
+        <li
+          v-for="(photo, id) in photos"
+          :key="photo.id"
+          :class="{ current: active === id }"
+          @click="current(photo.id)"
+        >
+          <img :src="photo.img" @click="isShow = !isShow" />
+        </li>
+      </ul>
+      <!--モーダルの表示非表示-->
+      <transition name="fade">
+        <div class="show" v-show="isShow">
+          <!--モーダル-->
+          <div class="modal__background">
+            <div class="modal__inner">
+              <div class="modal__close" @click="isShow = !isShow">×</div>
+              <!--モーダルの中のカルーセル-->
+              <div class="carousel__inner">
+                <transition name="active">
+                  <div
+                    class="carousel__main"
+                    :key="photos[active].id"
+                    v-show="active === photos[active].id"
+                  >
+                    <img :src="photos[active].img" alt="セパタクローの画像" />
+                    <h4>{{ photos[active].title }}</h4>
+                    <p>{{ photos[active].credit }}</p>
+                    <div @click="prev" class="carousel__prev"></div>
+                    <div @click="next" class="carousel__next"></div>
+                  </div>
+                  <!--モーダルの中のカルーセル-->
+                </transition>
+              </div>
+            </div>
           </div>
-        </transition>
-      </div>
-      <div @click="prev" class="carousel__prev"></div>
-      <div @click="next" class="carousel__next"></div>
-    </section>
-    <h4>{{ images[active].title }}</h4>
-    <p>{{ images[active].credit }}</p>
+          <!--モーダル-->
+        </div>
+        <!--モーダルの表示非表示-->
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -28,7 +53,8 @@ export default {
   data() {
     return {
       active: 0,
-      images: [
+      isShow: false,
+      photos: [
         {
           id: 0,
           img: "images/image000.jpg",
@@ -140,13 +166,13 @@ export default {
     },
     prev() {
       if (this.active <= 0) {
-        this.active = this.images.length - 1;
+        this.active = this.photos.length - 1;
       } else {
         this.active--;
       }
     },
     next() {
-      if (this.active >= this.images.length - 1) {
+      if (this.active >= this.photos.length - 1) {
         this.active = 0;
       } else {
         this.active++;
@@ -163,14 +189,100 @@ export default {
 </script>
 
 <style scoped>
+.gallery {
+  width: 1000px;
+  height: 1350px;
+  margin: 0 auto;
+}
+
 .biolet {
   color: #8b16f9;
 }
-.carousel {
+.container {
+  width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+ul::after {
+  content: "";
+  display: block;
+  width: 30%;
+}
+
+li {
+  width: 30%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* カルーセルサムネ*/
+.carousel__thumbnails img {
+  width: 100%;
+}
+
+.show {
+}
+
+/* モーダル */
+.modal__inner {
+  position: relative;
+  width: 1000px;
+  height: 560px;
+  padding: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.modal__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 50px;
+  z-index: 10;
+}
+
+/* カルーセル */
+.carousel__inner {
   width: 840px;
   height: 400px;
   margin: 0 auto 30px;
-  position: relative;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .carousel__main {
@@ -189,6 +301,7 @@ export default {
   left: 20px;
   cursor: pointer;
   color: lightgray;
+  z-index: 10;
 }
 
 .carousel__prev:hover {
@@ -204,6 +317,7 @@ export default {
   right: 20px;
   cursor: pointer;
   color: lightgray;
+  z-index: 10;
 }
 
 .carousel__next:hover {
@@ -222,8 +336,8 @@ export default {
 }
 
 .active-enter-active {
-  -webkit-transition: opacity 0.7s;
-  transition: opacity 0.7s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .active-leave {
@@ -235,8 +349,8 @@ export default {
 }
 
 .active-leave-active {
-  -webkit-transition: opacity 0.7s;
-  transition: opacity 0.7s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 /*# sourceMappingURL=app.css.map */
 
@@ -268,6 +382,6 @@ export default {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.4s;
+  transition: opacity 0.5s;
 }
 </style>
