@@ -1,13 +1,14 @@
 <template>
   <div class="about">
-    <h1 class="pink">This is an About page</h1>
+    <h1 class="pink">About Me</h1>
     <section>
       <div class="container">
         <h2>My life so far</h2>
         <div class="content-info">
           <img src="/images/image001.jpg" alt="" />
           <p class="text">
-            小林 裕和（コバヤシ ヒロカズ）<br />
+            <span class="jttl">小林 裕和</span><br />
+            こばやし ひろかず<br />
             １９８６年５月２６日生まれ<br />
             長野県で幼少時代を過ごす。<br />
             ２００２年に日本体育大学入学しセパタクローという<br />
@@ -31,6 +32,23 @@
             学習を開始し独学でWeb制作のノウハウを習得。<br />
             現在はVeu.jsなどフロントサイドエンジニアに向けての<br />
             学習を継続している。
+          </p>
+        </div>
+        <div class="content-info3">
+          <iframe
+            width="500"
+            height="281"
+            src="https://www.youtube.com/embed/jsh2EIxesmk"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <p class="text">
+            <span class="jttl">Introductory video</span><br />
+            制作<br />
+            株式会社XYOU<br />
+            Creator<br />
+            KENJI SHINODA<br />
           </p>
         </div>
       </div>
@@ -70,6 +88,12 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
+  margin-bottom: 20px;
+}
+
+.content-info3 {
+  display: flex;
+  justify-content: center;
 }
 
 .content-info .text {
@@ -90,6 +114,16 @@ export default {
   border-radius: 10px;
   width: 500px;
   margin-right: 10px;
+  line-height: 30px;
+}
+.content-info3 .text {
+  text-align: start;
+  font-weight: bold;
+  padding: 10px auto;
+  /* background: darkgray; */
+  border-radius: 10px;
+  width: 500px;
+  margin-left: 10px;
   line-height: 30px;
 }
 .jttl {
