@@ -70,8 +70,8 @@ export default {
         {
           id: 2,
           img: "images/image002.jpg",
-          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: "Photo By TAKASU TSUTOMU",
+          title: "18th ASIAN GAMES Palembang 2018",
+          credit: "Photo By IWAMOTO KATSUAKI",
         },
         {
           id: 3,
@@ -82,37 +82,37 @@ export default {
         {
           id: 4,
           img: "images/image004.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
+          credit: "Photo By NAGAHAMA KOMEI",
         },
         {
           id: 5,
           img: "images/image005.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          title: "ALL JAPAN CHAMPIONSHIP 2019",
+          credit: "Photo By IWAMOTO KATSUAKI",
         },
         {
           id: 6,
           img: "images/image006.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
+          credit: "Photo By IWAMOTO KATSUAKI",
         },
         {
           id: 7,
           img: "images/image007.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: "Photo By IWAMOTO KATSUAKI",
         },
         {
           id: 8,
           img: "images/image008.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
+          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
           credit: "Photo By TAKASU TSUTOMU",
         },
         {
           id: 9,
           img: "images/image009.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
+          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
           credit: "Photo By TAKASU TSUTOMU",
         },
         {
@@ -231,9 +231,6 @@ li {
 /* カルーセルサムネ*/
 .carousel__thumbnails img {
   width: 100%;
-}
-
-.show {
 }
 
 /* モーダル */
