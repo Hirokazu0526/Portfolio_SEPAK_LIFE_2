@@ -63,6 +63,9 @@ body {
   justify-content: center;
   margin-bottom: 50px;
 }
+.g-nav-list.sp {
+  display: none;
+}
 .g-nav-item {
   display: inline-block;
   width: 200px;
