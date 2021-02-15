@@ -143,6 +143,7 @@ p {
 /* カルーセルサムネ*/
 .works__thumbnails > li img {
   width: 50%;
+  height: 50%;
 }
 
 .works__thumbnails li {

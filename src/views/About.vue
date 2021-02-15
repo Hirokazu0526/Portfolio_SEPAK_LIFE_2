@@ -73,9 +73,11 @@ export default {
 }
 .content-info img {
   width: 50%;
+  height: 50%;
 }
 .content-info2 img {
   width: 50%;
+  height: 50%;
 }
 
 .content-info {
