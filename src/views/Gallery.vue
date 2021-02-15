@@ -10,7 +10,11 @@
           :class="{ current: active === id }"
           @click="current(photo.id)"
         >
-          <img :src="photo.img" @click="isShow = !isShow" />
+          <img
+            :src="photo.img"
+            @click="isShow = !isShow"
+            alt="セパタクローの写真"
+          />
         </li>
       </ul>
       <!--モーダルの表示非表示-->
