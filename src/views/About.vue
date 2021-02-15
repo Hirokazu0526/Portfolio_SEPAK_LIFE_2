@@ -5,7 +5,7 @@
       <div class="container">
         <h2>My life so far</h2>
         <div class="content-info">
-          <img src="/images/image001.jpg" alt="" />
+          <img src="/images/image001.jpg" alt="セパタクローの写真" />
           <p class="text">
             <span class="jttl">小林 裕和</span><br />
             こばやし ひろかず<br />
@@ -21,7 +21,7 @@
           </p>
         </div>
         <div class="content-info2">
-          <img src="/images/image006.jpg" alt="" />
+          <img src="/images/image006.jpg" alt="セパタクローの写真" />
           <p class="text">
             <span class="jttl">Job Career</span><br />
             競技と並行して会社員として勤務。<br />
