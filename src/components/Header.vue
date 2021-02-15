@@ -53,7 +53,6 @@ h2 {
     /* margin-left: 10px; */
   }
   h2 {
-    position: ;
   }
 }
 </style>
