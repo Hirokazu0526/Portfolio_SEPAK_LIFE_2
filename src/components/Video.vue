@@ -1,6 +1,6 @@
 <template>
   <div>
-    <video autoplay :src="video"></video>
+    <video autoplay :src="video" muted loop></video>
   </div>
 </template>
 
