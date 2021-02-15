@@ -5,13 +5,20 @@
       <Header />
       <Video />
       <!-- </div> -->
-      <div id="nav" class="g-nav-list">
-        <router-link to="/" class="g-nav-item">Home</router-link> |
-        <router-link to="/about" class="g-nav-item">About</router-link> |
+      <div id="nav" class="g-nav-list sp">
+        <router-link to="/" class="g-nav-item">Home</router-link>
+        <router-link to="/about" class="g-nav-item">About</router-link>
         <router-link to="/performance" class="g-nav-item"
           >Performance</router-link
         >
-        |
+        <router-link to="/gallery" class="g-nav-item">Gallery</router-link>
+      </div>
+      <div id="nav" class="g-nav-list pc">
+        <router-link to="/" class="g-nav-item">Home</router-link>
+        <router-link to="/about" class="g-nav-item">About</router-link>
+        <router-link to="/performance" class="g-nav-item"
+          >Performance</router-link
+        >
         <router-link to="/gallery" class="g-nav-item">Gallery</router-link>
       </div>
       <transition name="fade" mode="out-in">
@@ -50,15 +57,6 @@ body {
   text-align: center;
   color: #2c3e50;
 }
-/* .bg {
-  width: 100%;
-  background-image: url(/images/sepa_site.png);
-  background-color: rgba(95, 95, 95, 0.8);
-  background-blend-mode: darken;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 0 auto;
-} */
 
 .g-nav-list {
   display: flex;
@@ -99,5 +97,24 @@ body {
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.4s;
+}
+
+@media screen and (max-width: 599px) {
+  .g-nav-list.pc {
+    display: none;
+  }
+  .g-nav-list.sp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .g-nav-item {
+    margin: 10px;
+  }
+  .g-nav-item:first-child {
+    margin-left: 10px;
+  }
 }
 </style>

@@ -40,4 +40,20 @@ h2 {
   height: 50px;
   font-size: 1.8em;
 }
+
+@media screen and (max-width: 599px) {
+  .header-wrap {
+    width: 100%;
+  }
+  .header-inner {
+    justify-content: space-around;
+  }
+
+  .logo {
+    /* margin-left: 10px; */
+  }
+  h2 {
+    position: ;
+  }
+}
 </style>
