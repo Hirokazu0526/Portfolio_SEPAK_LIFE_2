@@ -1,6 +1,12 @@
 <template>
   <div>
-    <video autoplay :src="video" muted></video>
+    <video
+      autoplay
+      :src="video"
+      muted
+      playsinline
+      poster="images/video_img.png"
+    ></video>
   </div>
 </template>
 
