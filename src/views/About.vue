@@ -36,8 +36,18 @@
         </div>
         <div class="content-info3">
           <iframe
+            class="pc"
             width="500"
             height="281"
+            src="https://www.youtube.com/embed/jsh2EIxesmk"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="sp"
+            width="350"
+            height="196"
             src="https://www.youtube.com/embed/jsh2EIxesmk"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -97,6 +107,9 @@ export default {
   display: flex;
   justify-content: center;
 }
+.content-info3 .sp {
+  display: none;
+}
 
 .content-info .text {
   text-align: start;
@@ -128,7 +141,51 @@ export default {
   margin-left: 10px;
   line-height: 30px;
 }
+
 .jttl {
   font-size: 30px;
+}
+
+@media screen and (max-width: 599px) {
+  .about {
+    width: 100%;
+  }
+  .content-info {
+    flex-direction: column;
+    margin: 20px;
+  }
+  .content-info2 {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .content-info3 {
+    flex-direction: column;
+    margin: 20px;
+  }
+  .content-info3 .pc {
+    display: none;
+  }
+
+  .content-info img {
+    width: 100%;
+    height: 100%;
+  }
+  .content-info2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content-info .text,
+  .content-info2 .text,
+  .content-info3 .text {
+    width: 100%;
+    font-size: 13px;
+    margin-top: 15px;
+    line-height: 25px;
+  }
+  .jttl {
+    font-size: 30px;
+  }
 }
 </style>

@@ -48,11 +48,5 @@ h2 {
   .header-inner {
     justify-content: space-around;
   }
-
-  .logo {
-    /* margin-left: 10px; */
-  }
-  h2 {
-  }
 }
 </style>
