@@ -94,6 +94,11 @@ export default {
 .pink {
   color: #ff04ff;
 }
+
+h1 {
+  font-size: 40px;
+  padding: 0 30px;
+}
 .content-info img {
   width: 50%;
   height: 50%;
