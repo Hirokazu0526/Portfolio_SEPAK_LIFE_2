@@ -3,7 +3,16 @@
     <div class="container">
       <!-- <div > -->
       <Header />
-      <Video />
+      <div>
+        <video
+          autoplay
+          :src="video"
+          muted
+          playsinline
+          poster="images/video_img.png"
+        ></video>
+      </div>
+      <!-- <Video /> -->
       <!-- </div> -->
       <div id="nav" class="g-nav-list sp">
         <router-link to="/" class="g-nav-item">Home</router-link>
@@ -31,15 +40,20 @@
 
 <script>
 import Header from "./components/Header";
-import Video from "./components/Video";
+// import Video from "./components/Video";
 import Footer from "./components/Footer";
 
 export default {
   name: "App",
   components: {
     Header,
-    Video,
+    // Video,
     Footer,
+  },
+  data() {
+    return {
+      video: "video/sepak_life_pv.mp4",
+    };
   },
 };
 </script>
@@ -56,6 +70,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+video {
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .g-nav-list {
