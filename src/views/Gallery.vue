@@ -30,10 +30,11 @@
                   class="carousel__main"
                   :key="photos[active].id"
                   v-show="active === photos[active].id"
+                  eager
                 >
                   <img :src="photos[active].img" alt="セパタクローの画像" />
-                  <h4>{{ photos[active].title }}</h4>
-                  <p>&copy;{{ photos[active].credit }}</p>
+                  <h4 eager>{{ photos[active].title }}</h4>
+                  <p eager>&copy;{{ photos[active].credit }}</p>
                   <div @click="prev" class="carousel__prev"></div>
                   <div @click="next" class="carousel__next"></div>
                 </div>
