@@ -53,7 +53,7 @@ export default {
   },
   data() {
     return {
-      video: "video/sepak_life_pv.mp4",
+      video: "video/sepak_life_pv5.mp4",
     };
   },
 };
