@@ -26,20 +26,18 @@
               <div class="modal__close" @click="isShow = !isShow">×</div>
               <!--モーダルの中のカルーセル-->
               <div class="carousel__inner">
-                <transition name="active">
-                  <div
-                    class="carousel__main"
-                    :key="photos[active].id"
-                    v-show="active === photos[active].id"
-                  >
-                    <img :src="photos[active].img" alt="セパタクローの画像" />
-                    <h4>{{ photos[active].title }}</h4>
-                    <p>{{ photos[active].credit }}</p>
-                    <div @click="prev" class="carousel__prev"></div>
-                    <div @click="next" class="carousel__next"></div>
-                  </div>
-                  <!--モーダルの中のカルーセル-->
-                </transition>
+                <div
+                  class="carousel__main"
+                  :key="photos[active].id"
+                  v-show="active === photos[active].id"
+                >
+                  <img :src="photos[active].img" alt="セパタクローの画像" />
+                  <h4>{{ photos[active].title }}</h4>
+                  <p>&copy;{{ photos[active].credit }}</p>
+                  <div @click="prev" class="carousel__prev"></div>
+                  <div @click="next" class="carousel__next"></div>
+                </div>
+                <!--モーダルの中のカルーセル-->
               </div>
             </div>
           </div>
@@ -63,103 +61,103 @@ export default {
           id: 0,
           img: "images/image000.jpg",
           title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: "Photo By NAGAHAMA KOMEI",
+          credit: " Yoshiteru Nagahama",
         },
         {
           id: 1,
           img: "images/image001.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By IWAMOTO KATSUAKI",
+          credit: " Katsuaki Iwamoto",
         },
         {
           id: 2,
           img: "images/image002.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By IWAMOTO KATSUAKI",
+          credit: " Katsuaki Iwamoto",
         },
         {
           id: 3,
           img: "images/image003.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: " Tsutomu Takasu",
         },
         {
           id: 4,
           img: "images/image004.jpg",
-          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: "Photo By NAGAHAMA KOMEI",
+          title: "ALL JAPAN CHAMPIONSHIP 2019",
+          credit: " Yoshiteru Nagahama",
         },
         {
           id: 5,
           img: "images/image005.jpg",
-          title: "ALL JAPAN CHAMPIONSHIP 2019",
-          credit: "Photo By IWAMOTO KATSUAKI",
+          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
+          credit: " Katsuaki Iwamoto",
         },
         {
           id: 6,
           img: "images/image006.jpg",
           title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: "Photo By IWAMOTO KATSUAKI",
+          credit: " Katsuaki Iwamoto",
         },
         {
           id: 7,
           img: "images/image007.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By IWAMOTO KATSUAKI",
+          credit: " Katsuaki Iwamoto",
         },
         {
           id: 8,
           img: "images/image008.jpg",
           title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: " Tsutomu Takasu",
         },
         {
           id: 9,
           img: "images/image009.jpg",
           title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: " Tsutomu Takasu",
         },
         {
           id: 10,
           img: "images/image010.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: " Tsutomu Takasu",
         },
         {
           id: 11,
           img: "images/image011.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: " Tsutomu Takasu",
         },
         {
           id: 12,
           img: "images/image012.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: " Tsutomu Takasu",
         },
         {
           id: 13,
           img: "images/image013.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: " Tsutomu Takasu",
         },
         {
           id: 14,
           img: "images/image014.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: " Tsutomu Takasu",
         },
         {
           id: 15,
           img: "images/image015.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: " Tsutomu Takasu",
         },
         {
           id: 16,
           img: "images/image016.jpg",
           title: "18th ASIAN GAMES Palembang 2018",
-          credit: "Photo By TAKASU TSUTOMU",
+          credit: " Tsutomu Takasu",
         },
       ],
     };
