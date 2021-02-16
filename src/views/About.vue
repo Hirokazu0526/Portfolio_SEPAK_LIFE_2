@@ -36,6 +36,8 @@
         </div>
         <div class="content-info3">
           <iframe
+            v-if="show === true"
+            id="pc"
             class="pc"
             width="500"
             height="281"
@@ -45,9 +47,11 @@
             allowfullscreen
           ></iframe>
           <iframe
+            v-else
+            id="sp"
             class="sp"
-            width="350"
-            height="196"
+            width="374"
+            height="209"
             src="https://www.youtube.com/embed/jsh2EIxesmk"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -69,6 +73,15 @@
 <script>
 export default {
   name: "About",
+  computed: {
+    show() {
+      if (window.matchMedia("(min-width: 599px)").matches) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
 };
 </script>
 
@@ -106,9 +119,6 @@ export default {
 .content-info3 {
   display: flex;
   justify-content: center;
-}
-.content-info3 .sp {
-  display: none;
 }
 
 .content-info .text {
@@ -150,21 +160,11 @@ export default {
   .about {
     width: 100%;
   }
-  .content-info {
-    flex-direction: column;
-    margin: 20px;
-  }
-  .content-info2 {
-    flex-direction: column;
-    margin: 20px;
-  }
-
+  .content-info,
+  .content-info2,
   .content-info3 {
     flex-direction: column;
     margin: 20px;
-  }
-  .content-info3 .pc {
-    display: none;
   }
 
   .content-info img {
@@ -181,7 +181,7 @@ export default {
   .content-info3 .text {
     width: 100%;
     font-size: 13px;
-    margin-top: 15px;
+    margin: 15px 0;
     line-height: 25px;
   }
   .jttl {
