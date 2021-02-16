@@ -177,7 +177,7 @@ p {
 @media screen and (max-width: 599px) {
   .performance {
     width: 100%;
-    height: 2600px;
+    height: 2650px;
   }
 
   .container {
