@@ -16,7 +16,7 @@
             学生時代の時間を部活動に注いできた。<br />
             ２００９年、卒業と同時に全日本代表候補に選抜され<br />
             現在までの１１年間数多くの国際大会に出場してきた。<br />
-            過去最高成績は２０１８年アジア競技大会で銀メダルを獲得。<br />
+            ２０１８年アジア競技大会では最高成績となる銀メダルを獲得。<br />
             国内大会は全日本選手権を５度優勝している。
           </p>
         </div>
@@ -26,11 +26,9 @@
             <span class="jttl">Job Career</span><br />
             競技と並行して会社員として勤務。<br />
             某医療機製造メーカーにて販売促進業務を担当。<br />
-            オウンドメディアの運用、動画コンテンツの制作や<br />
-            コーポレートサイトの運用に従事。<br />
-            Web運用に興味を持ち、２０２０年より本格的にWeb制作の<br />
-            学習を開始し独学でWeb制作のノウハウを習得。<br />
-            現在はVeu.jsなどフロントサイドエンジニアに向けての<br />
+            オウンドメディアの運用、動画コンテンツの制作やコーポレートサイトの運用に従事。<br />
+            Web運用に興味を持ち、２０２０年より本格的にWeb制作の学習を開始し独学でWeb制作のノウハウを習得。<br />
+            現在はVeu.jsなどフロントエンドエンジニアに向けての<br />
             学習を継続している。
           </p>
         </div>
@@ -94,7 +92,11 @@ export default {
 .pink {
   color: #ff04ff;
 }
-
+p,
+span {
+  padding: 0;
+  margin: 0;
+}
 h1 {
   font-size: 40px;
   padding: 0 30px;
@@ -129,7 +131,6 @@ h1 {
 .content-info .text {
   text-align: start;
   font-weight: bold;
-  padding: 10px auto;
   /* background: darkgray; */
   border-radius: 10px;
   width: 500px;
@@ -139,7 +140,6 @@ h1 {
 .content-info2 .text {
   text-align: start;
   font-weight: bold;
-  padding: 10px auto;
   /* background: darkgray; */
   border-radius: 10px;
   width: 500px;
@@ -149,7 +149,6 @@ h1 {
 .content-info3 .text {
   text-align: start;
   font-weight: bold;
-  padding: 10px auto;
   /* background: darkgray; */
   border-radius: 10px;
   width: 500px;
