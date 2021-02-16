@@ -32,8 +32,8 @@
                   v-show="active === photos[active].id"
                 >
                   <img :src="photos[active].img" alt="セパタクローの画像" />
-                  <h4 eager>{{ photos[active].title }}</h4>
-                  <p eager>&copy;{{ photos[active].credit }}</p>
+                  <h4 class="lz">{{ photos[active].title }}</h4>
+                  <p class="lz">&copy;{{ photos[active].credit }}</p>
                   <div @click="prev" class="carousel__prev"></div>
                   <div @click="next" class="carousel__next"></div>
                 </div>
@@ -390,6 +390,21 @@ li {
 .fade-leave-active {
   transition: opacity 0.5s;
 }
+
+.lz {
+  animation: lazyLoad 1s;
+}
+
+@keyframes lazyLoad {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .gallery {
     width: 100%;
