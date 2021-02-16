@@ -392,7 +392,7 @@ li {
 }
 
 .lz {
-  animation: lazyLoad 1s;
+  animation: lazyLoad 2s;
 }
 
 @keyframes lazyLoad {
