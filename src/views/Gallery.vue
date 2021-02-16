@@ -202,6 +202,10 @@ export default {
 .biolet {
   color: #8b16f9;
 }
+h1 {
+  font-size: 40px;
+  padding: 0 30px;
+}
 .container {
   width: 1000px;
   height: 100vh;
@@ -384,5 +388,62 @@ li {
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
+}
+@media screen and (max-width: 599px) {
+  .gallery {
+    width: 100%;
+    height: 1250px;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  ul::after {
+    content: "";
+    display: block;
+    width: 48%;
+  }
+
+  li {
+    width: 48%;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .modal__inner {
+    width: 95%;
+    height: 75%;
+    padding: 0;
+  }
+
+  .carousel__inner {
+    width: 100%;
+    height: 400px;
+    top: 50%;
+  }
+  .carousel__main {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .carousel__main img {
+    width: 95%;
+  }
+
+  .carousel__prev {
+    top: 250px;
+    left: 100px;
+  }
+
+  .carousel__next {
+    top: 250px;
+    right: 100px;
+  }
+
+  .carousel__main h4 {
+    margin-top: 100px;
+  }
 }
 </style>
