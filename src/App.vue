@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg">
+  <div id="app" class="bg" v-cloak>
     <div class="container">
       <!-- <div > -->
       <Header />
@@ -60,6 +60,9 @@ export default {
 </script>
 
 <style>
+[v-cloak] {
+  display: none;
+}
 body {
   background: #00061b;
   margin: 0;
