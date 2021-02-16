@@ -10,6 +10,7 @@
           muted
           playsinline
           poster="images/video_img.png"
+          loop
         ></video>
       </div>
       <!-- <Video /> -->
