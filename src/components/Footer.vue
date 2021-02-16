@@ -70,4 +70,14 @@ li {
 .sns__icon img {
   width: 100%;
 }
+
+@media screen and (max-width: 599px) {
+  p {
+    font-size: 10px;
+  }
+  .sns__icon a {
+    width: 40px;
+    height: 40px;
+  }
+}
 </style>
