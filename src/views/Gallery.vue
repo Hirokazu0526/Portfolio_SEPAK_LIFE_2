@@ -392,7 +392,7 @@ li {
 @media screen and (max-width: 599px) {
   .gallery {
     width: 100%;
-    height: 1550px;
+    height: 1500px;
   }
   .container {
     width: 90%;
@@ -433,12 +433,12 @@ li {
   }
 
   .carousel__prev {
-    top: 300px;
+    top: 280px;
     left: 100px;
   }
 
   .carousel__next {
-    top: 300px;
+    top: 280px;
     right: 100px;
   }
 
