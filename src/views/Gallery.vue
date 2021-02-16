@@ -392,7 +392,7 @@ li {
 @media screen and (max-width: 599px) {
   .gallery {
     width: 100%;
-    height: 1400px;
+    height: 1380px;
   }
   .container {
     width: 90%;
@@ -413,7 +413,7 @@ li {
 
   .modal__inner {
     width: 95%;
-    height: 75%;
+    height: 70%;
     padding: 0;
   }
 
