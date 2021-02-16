@@ -399,6 +399,9 @@ li {
   0% {
     opacity: 0;
   }
+  70% {
+    opacity: 0;
+  }
 
   100% {
     opacity: 1;
