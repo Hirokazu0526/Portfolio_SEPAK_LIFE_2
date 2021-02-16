@@ -48,8 +48,8 @@
             v-else
             id="sp"
             class="sp"
-            width="374"
-            height="209"
+            width="370"
+            height="204"
             src="https://www.youtube.com/embed/jsh2EIxesmk"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -190,6 +190,9 @@ h1 {
   }
   .jttl {
     font-size: 30px;
+  }
+  .sp {
+    width: 100%;
   }
 }
 </style>
