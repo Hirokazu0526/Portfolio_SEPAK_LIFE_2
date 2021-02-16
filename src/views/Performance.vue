@@ -77,25 +77,6 @@ export default {
       ],
     };
   },
-  methods: {
-    current(id) {
-      this.active = id;
-    },
-    prev() {
-      if (this.active <= 0) {
-        this.active = this.photos.length - 1;
-      } else {
-        this.active--;
-      }
-    },
-    next() {
-      if (this.active >= this.photos.length - 1) {
-        this.active = 0;
-      } else {
-        this.active++;
-      }
-    },
-  },
 };
 </script>
 
@@ -107,6 +88,11 @@ export default {
 }
 .yellow {
   color: #adff2e;
+}
+
+h1 {
+  font-size: 40px;
+  padding: 0 30px;
 }
 
 .container {
@@ -187,5 +173,26 @@ p {
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
+}
+@media screen and (max-width: 599px) {
+  .performance {
+    width: 100%;
+    height: 2500px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .works__thumbnails > li img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .works__thumbnails li {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>
