@@ -30,7 +30,6 @@
                   class="carousel__main"
                   :key="photos[active].id"
                   v-show="active === photos[active].id"
-                  eager
                 >
                   <img :src="photos[active].img" alt="セパタクローの画像" />
                   <h4 eager>{{ photos[active].title }}</h4>
