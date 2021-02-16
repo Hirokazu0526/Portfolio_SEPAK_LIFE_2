@@ -22,7 +22,7 @@
         <div class="show" v-show="isShow">
           <!--モーダル-->
           <div class="modal__background">
-            <div class="modal__inner">
+            <div class="modal__inner" v-cloak>
               <div class="modal__close" @click="isShow = !isShow">×</div>
               <!--モーダルの中のカルーセル-->
               <div class="carousel__inner">
@@ -191,6 +191,9 @@ export default {
 </script>
 
 <style scoped>
+[v-cloak] {
+  display: none;
+}
 .gallery {
   width: 1000px;
   height: 1350px;
