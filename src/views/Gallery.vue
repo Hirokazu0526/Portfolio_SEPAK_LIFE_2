@@ -392,14 +392,14 @@ li {
 }
 
 .lz {
-  animation: lazyLoad 2s;
+  animation: lazyLoad 0.7s;
 }
 
 @keyframes lazyLoad {
   0% {
     opacity: 0;
   }
-  40% {
+  30% {
     opacity: 0;
   }
 
