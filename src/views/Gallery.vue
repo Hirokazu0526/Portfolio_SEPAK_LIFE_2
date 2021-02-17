@@ -452,17 +452,17 @@ li {
   }
 
   .carousel__prev {
-    top: 280px;
+    top: 370px;
     left: 100px;
   }
 
   .carousel__next {
-    top: 280px;
+    top: 370px;
     right: 100px;
   }
 
   .carousel__main h4 {
-    margin-top: 100px;
+    margin-top: 20px;
   }
 }
 </style>
