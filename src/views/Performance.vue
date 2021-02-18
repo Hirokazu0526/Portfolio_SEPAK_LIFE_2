@@ -20,7 +20,25 @@
           </div>
         </li>
       </ul>
-      <!--モーダルの表示非表示-->
+      <div class="study">
+        <h2>学習記録</h2>
+        <div class="study_flex">
+          <div class="study__icon_git">
+            <a href="https://github.com/Hirokazu0526" target="_blank"
+              ><img src="images/GitHub.png" />
+              <h3>GitHub</h3></a
+            >
+          </div>
+          <div class="study__icon_net">
+            <a
+              href="https://app.netlify.com/teams/hirokazu0526/overview"
+              target="_blank"
+              ><img src="images/netlify.png" />
+              <h3>Netlify</h3></a
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -83,7 +101,7 @@ export default {
 <style scoped>
 .performance {
   width: 1000px;
-  height: 1450px;
+  height: 1750px;
   margin: 0 auto;
 }
 .yellow {
@@ -153,6 +171,31 @@ p {
   background-size: contain;
   vertical-align: middle;
 }
+
+.study {
+  margin-top: 70px;
+}
+
+.study h2 {
+  color: white;
+}
+.study h3 {
+  color: white;
+  margin: 0;
+}
+
+.study_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 290px;
+  margin: 0 auto;
+}
+.study_flex a {
+  display: block;
+  height: 152px;
+}
+
 .active-enter {
   opacity: 0;
 }
@@ -177,7 +220,7 @@ p {
 @media screen and (max-width: 599px) {
   .performance {
     width: 100%;
-    height: 2650px;
+    height: 2850px;
   }
 
   .container {
@@ -193,6 +236,15 @@ p {
   .works__thumbnails li {
     display: flex;
     flex-direction: column;
+  }
+  .study_flex {
+    width: 220px;
+  }
+  .study__icon_git img {
+    width: 90px;
+  }
+  .study__icon_net img {
+    width: 90px;
   }
 }
 </style>
