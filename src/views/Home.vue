@@ -1,10 +1,11 @@
 <template>
   <div class="home">
-    <h2>
-      本サイトはVue CLIを使用したSPA(Single Page
-      Application)で制作しております。
-    </h2>
     <div class="container">
+      <h2>
+        本サイトはVue CLIを使用したSPA(Single Page
+        Application)で制作しております。
+      </h2>
+
       <p>
         Vue Routerのプラグインを利用しコンポーネントのルーティングを実装。<br />
         Galleryコンポーネントではモーダルやカルーセルスライダーを実装し、<br />
