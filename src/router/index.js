@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-// import VueAnalytics from 'vue-analytics'
-import VueGtag from 'VueGtag'
+import VueGtag from 'vue-gtag'
 
 
 Vue.use(VueRouter)
@@ -45,10 +44,6 @@ const router = new VueRouter({
   routes
 })
 
-// Vue.use(VueAnalytics, {
-//   id: 'G-TXBCZZN8J0',
-//   router
-// })
 
 Vue.use(VueGtag, {
   config: {id: 'G-TXBCZZN8J0'}
