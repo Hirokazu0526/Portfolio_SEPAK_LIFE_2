@@ -412,7 +412,7 @@ li {
 @media screen and (max-width: 599px) {
   .gallery {
     width: 100%;
-    height: 1580px;
+    height: 1600px;
   }
   .container {
     width: 90%;
