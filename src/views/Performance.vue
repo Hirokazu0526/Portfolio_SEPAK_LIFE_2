@@ -98,9 +98,9 @@ export default {
           title: "バナー制作事例_1 ",
           link: "https://www.hakuju.co.jp/",
           skillTheme: "デザイン制作",
-          skill: "Adobe Illustrator Photoshop",
+          skill: "Adobe Illustrator Photoshop / HTML5 CSS3",
           coment:
-            "某医療機器メーカー新製品発売におけるHP用キービジュアルを担当。３色のカラー展開をシンプルに配置しスタイリッシュに表現",
+            "某医療機器製造メーカーのコーポレートサイト運用、新製品発売等におけるキービジュアル制作を担当いたしました。",
         },
       ],
     };
