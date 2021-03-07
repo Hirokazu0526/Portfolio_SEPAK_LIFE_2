@@ -35,7 +35,7 @@ export default {
 }
 h2 {
   display: inline-block;
-  color: rgb(252, 252, 252);
+  color: #1c273e;
   line-height: 50px;
   height: 50px;
   font-size: 1.8em;

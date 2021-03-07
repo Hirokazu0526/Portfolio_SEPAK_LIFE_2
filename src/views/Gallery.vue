@@ -196,13 +196,13 @@ export default {
 }
 .gallery {
   width: 1000px;
-  height: 1350px;
+  height: 1550px;
   margin: 0 auto;
 }
 
-.biolet {
+/* .biolet {
   color: #8b16f9;
-}
+} */
 h1 {
   font-size: 40px;
   padding: 0 30px;
@@ -411,7 +411,7 @@ li {
 @media screen and (max-width: 599px) {
   .gallery {
     width: 100%;
-    height: 1380px;
+    height: 1580px;
   }
   .container {
     width: 90%;

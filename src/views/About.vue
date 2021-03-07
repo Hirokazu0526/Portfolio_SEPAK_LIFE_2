@@ -86,13 +86,13 @@ export default {
 
 <style scoped>
 .about {
-  color: white;
+  color: #1c273e;
   width: 1000px;
   margin: 0 auto;
 }
-.pink {
+/* .pink {
   color: #ff04ff;
-}
+} */
 p,
 span {
   padding: 0;

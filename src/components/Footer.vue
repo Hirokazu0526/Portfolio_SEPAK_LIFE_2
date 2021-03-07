@@ -57,7 +57,7 @@ li {
 
 .copy_right {
   font-size: 1rem;
-  color: white;
+  color: #1c273e;
   margin: 50px auto 20px;
 }
 

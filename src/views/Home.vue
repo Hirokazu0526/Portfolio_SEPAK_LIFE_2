@@ -41,7 +41,7 @@ export default {
 h2,
 h3,
 p {
-  color: white;
+  color: #1c273e;
 }
 p {
   font-size: 20px;
@@ -51,7 +51,7 @@ h3 {
   font-size: 25px;
 }
 
-.ab {
+/* .ab {
   color: #ff04ff;
 }
 .pf {
@@ -62,7 +62,7 @@ h3 {
 }
 .st {
   color: cyan;
-}
+} */
 
 @media screen and (max-width: 599px) {
   .home {
