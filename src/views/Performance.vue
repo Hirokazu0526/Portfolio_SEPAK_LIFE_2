@@ -25,7 +25,7 @@
         <div class="study_flex">
           <div class="study__icon_git">
             <a href="https://github.com/Hirokazu0526" target="_blank"
-              ><img src="images/GitHub.png" />
+              ><img src="images/GitHub_.png" />
               <h3>GitHub</h3></a
             >
           </div>
@@ -92,6 +92,16 @@ export default {
           coment:
             "短い時間の中に競技のダイナミックなプレーを入れ、インパクトを残すようにエフェクトを使い表現いたしました。",
         },
+        {
+          id: 4,
+          img: "images/works004.png",
+          title: "バナー制作事例_1 ",
+          link: "https://www.hakuju.co.jp/",
+          skillTheme: "デザイン制作",
+          skill: "Adobe Illustrator Photoshop",
+          coment:
+            "某医療機器メーカー新製品発売におけるHP用キービジュアルを担当。３色のカラー展開をシンプルに配置しスタイリッシュに表現",
+        },
       ],
     };
   },
@@ -101,12 +111,12 @@ export default {
 <style scoped>
 .performance {
   width: 1000px;
-  height: 1750px;
+  height: 2280px;
   margin: 0 auto;
 }
-.yellow {
+/* .yellow {
   color: #adff2e;
-}
+} */
 
 h1 {
   font-size: 40px;
@@ -121,7 +131,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #1c273e;
 }
 
 ul,
@@ -134,6 +144,10 @@ li {
 li {
   width: 100%;
   margin-top: 10px;
+}
+
+h3 {
+  margin: 0;
 }
 
 h4 {
@@ -159,15 +173,15 @@ p {
 .works__info {
   text-align: start;
   padding: 10px;
-  color: white;
+  color: #1c273e;
 }
 
 .works__info a::after {
   content: "";
   display: inline-block;
-  width: 18px; /*画像の幅*/
-  height: 18px; /*画像の高さ*/
-  background-image: url(/images/icon001.png);
+  width: 20px; /*画像の幅*/
+  height: 20px; /*画像の高さ*/
+  background-image: url(/images/icon002.png);
   background-size: contain;
   vertical-align: middle;
 }
@@ -177,10 +191,10 @@ p {
 }
 
 .study h2 {
-  color: white;
+  color: #1c273e;
 }
 .study h3 {
-  color: white;
+  color: #1c273e;
   margin: 0;
 }
 
@@ -220,7 +234,7 @@ p {
 @media screen and (max-width: 599px) {
   .performance {
     width: 100%;
-    height: 2850px;
+    height: 3450px;
   }
 
   .container {
@@ -231,6 +245,8 @@ p {
   .works__thumbnails > li img {
     width: 100%;
     height: 100%;
+    margin-bottom: 0;
+    margin-top: 20px;
   }
 
   .works__thumbnails li {
