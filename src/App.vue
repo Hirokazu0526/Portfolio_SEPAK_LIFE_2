@@ -4,14 +4,15 @@
       <!-- <div > -->
       <Header />
       <div>
-        <video
+        <img src="images/portfolio.png" alt="セパタクローライフ" />
+        <!-- <video
           autoplay
           :src="video"
           muted
           playsinline
           poster="images/video_img.png"
           loop
-        ></video>
+        ></video> -->
       </div>
       <!-- <Video /> -->
       <!-- </div> -->
@@ -64,19 +65,24 @@ export default {
   display: none;
 }
 body {
-  background: #00061b;
+  background: #f0eee6;
   margin: 0;
   padding: 0;
+  color: #1c273e;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #1c273e;
 }
 
 video {
+  width: 100%;
+  margin-bottom: 30px;
+}
+img {
   width: 100%;
   margin-bottom: 30px;
 }
@@ -99,10 +105,19 @@ video {
   font-weight: bold;
   text-decoration: none;
   font-size: 25px;
-  color: rgb(31, 0, 206);
+  color: #fff;
 }
 
+.g-nav-item {
+  background: #1c273e;
+}
 .g-nav-item:first-child {
+  margin-left: 0;
+}
+.g-nav-item:focus {
+  background: #588af7;
+}
+/* .g-nav-item:first-child {
   margin-left: 0;
   background: cyan;
 }
@@ -114,7 +129,7 @@ video {
 }
 .g-nav-item:nth-child(4) {
   background: rgb(139, 21, 250);
-}
+} */
 
 .fade-enter,
 .fade-leave-to {
