@@ -246,7 +246,7 @@ li {
 .modal__inner {
   position: relative;
   width: 1000px;
-  height: 560px;
+  height: 600px;
   padding: 20px;
   background-color: #fff;
   box-sizing: border-box;
@@ -299,6 +299,7 @@ li {
 
 .carousel__main img {
   width: 600px;
+  margin-bottom: 10px;
 }
 
 .carousel__prev {
@@ -449,15 +450,16 @@ li {
 
   .carousel__main img {
     width: 95%;
+    margin-bottom: 10px;
   }
 
   .carousel__prev {
-    top: 370px;
+    top: 385px;
     left: 100px;
   }
 
   .carousel__next {
-    top: 370px;
+    top: 385px;
     right: 100px;
   }
 
