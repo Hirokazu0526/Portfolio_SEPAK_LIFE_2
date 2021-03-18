@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import VueGtag from 'vue-gtag'
-import firebase from 'firebase'
+import firebase from "firebase/app"
+import "firebase/auth"
+import "firebase/firestore"
 
 
 
