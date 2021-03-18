@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p class="copy_right">&copy; 2021 Kobayashi Hirokazu</p>
     <div class="sns">
       <ul class="sns-item">
         <li class="sns__icon">
@@ -22,6 +21,10 @@
         </li>
       </ul>
     </div>
+    <br /><br />
+    <router-link to="/login" class="copy_right"
+      >&copy; 2021 Kobayashi Hirokazu</router-link
+    >
     <p>
       当サイト内の画像等の内容の無断転載及び複製等の行為はご遠慮ください。
     </p>
@@ -58,7 +61,8 @@ li {
 .copy_right {
   font-size: 1rem;
   color: #1c273e;
-  margin: 50px auto 20px;
+  margin: 100px auto 50px;
+  text-decoration: none;
 }
 
 .sns__icon {
