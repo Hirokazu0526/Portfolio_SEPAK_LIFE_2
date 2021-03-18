@@ -4,15 +4,10 @@
 
     <div class="container">
       <ul class="carousel__thumbnails">
-        <li
-          v-for="(photo, id) in photos"
-          :key="photo.id"
-          :class="{ current: active === id }"
-          @click="current(photo.id)"
-        >
+        <li v-for="gallery in galleries" :key="gallery.index">
           <img
-            :src="photo.img"
-            @click="isShow = !isShow"
+            :src="gallery.image"
+            @click="modal(gallery)"
             alt="セパタクローの写真"
           />
         </li>
@@ -26,16 +21,12 @@
               <div class="modal__close" @click="isShow = !isShow">×</div>
               <!--モーダルの中のカルーセル-->
               <div class="carousel__inner">
-                <div
-                  class="carousel__main"
-                  :key="photos[active].id"
-                  v-show="active === photos[active].id"
-                >
-                  <img :src="photos[active].img" alt="セパタクローの画像" />
-                  <h4 class="lz">{{ photos[active].title }}</h4>
-                  <p class="lz">&copy;{{ photos[active].credit }}</p>
-                  <div @click="prev" class="carousel__prev"></div>
-                  <div @click="next" class="carousel__next"></div>
+                <div class="carousel__main" v-show="isShow">
+                  <img :src="galleryItem.image" alt="セパタクローの画像" />
+                  <h4 class="lz">{{ galleryItem.imageTitle }}</h4>
+                  <p class="lz">&copy;{{ galleryItem.credit }}</p>
+                  <!-- <div @click="prev" class="carousel__prev"></div>
+                  <div @click="next" class="carousel__next"></div> -->
                 </div>
                 <!--モーダルの中のカルーセル-->
               </div>
@@ -50,143 +41,54 @@
 </template>
 
 <script>
+import firebase from "@/plugins/firebase";
+
 export default {
   name: "Gallery",
   data() {
     return {
-      active: 0,
       isShow: false,
-      photos: [
-        {
-          id: 0,
-          img: "images/image000.jpg",
-          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: " Yoshiteru Nagahama",
-        },
-        {
-          id: 1,
-          img: "images/image001.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Katsuaki Iwamoto",
-        },
-        {
-          id: 2,
-          img: "images/image002.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Katsuaki Iwamoto",
-        },
-        {
-          id: 3,
-          img: "images/image003.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Tsutomu Takasu",
-        },
-        {
-          id: 4,
-          img: "images/image004.jpg",
-          title: "ALL JAPAN CHAMPIONSHIP 2019",
-          credit: " Yoshiteru Nagahama",
-        },
-        {
-          id: 5,
-          img: "images/image005.jpg",
-          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: " Katsuaki Iwamoto",
-        },
-        {
-          id: 6,
-          img: "images/image006.jpg",
-          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: " Katsuaki Iwamoto",
-        },
-        {
-          id: 7,
-          img: "images/image007.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Katsuaki Iwamoto",
-        },
-        {
-          id: 8,
-          img: "images/image008.jpg",
-          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: " Tsutomu Takasu",
-        },
-        {
-          id: 9,
-          img: "images/image009.jpg",
-          title: "ALL JAPAN OPEN CHAMPIONSHIP 2020",
-          credit: " Tsutomu Takasu",
-        },
-        {
-          id: 10,
-          img: "images/image010.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Tsutomu Takasu",
-        },
-        {
-          id: 11,
-          img: "images/image011.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Tsutomu Takasu",
-        },
-        {
-          id: 12,
-          img: "images/image012.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Tsutomu Takasu",
-        },
-        {
-          id: 13,
-          img: "images/image013.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Tsutomu Takasu",
-        },
-        {
-          id: 14,
-          img: "images/image014.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Tsutomu Takasu",
-        },
-        {
-          id: 15,
-          img: "images/image015.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Tsutomu Takasu",
-        },
-        {
-          id: 16,
-          img: "images/image016.jpg",
-          title: "18th ASIAN GAMES Palembang 2018",
-          credit: " Tsutomu Takasu",
-        },
-      ],
+      galleryItem: "",
+      galleries: [],
     };
   },
   methods: {
-    current(id) {
-      this.active = id;
+    modal(gallery) {
+      this.isShow = true;
+      this.galleryItem = gallery;
     },
-    prev() {
-      if (this.active <= 0) {
-        this.active = this.photos.length - 1;
-      } else {
-        this.active--;
-      }
-    },
-    next() {
-      if (this.active >= this.photos.length - 1) {
-        this.active = 0;
-      } else {
-        this.active++;
-      }
-    },
+    // prev() {
+    //   if (this.active <= 0) {
+    //     this.active = this.galleries.length - 1;
+    //   } else {
+    //     this.active--;
+    //   }
+    // },
+    // next() {
+    //   if (this.active >= this.galleries.length - 1) {
+    //     this.active = 0;
+    //   } else {
+    //     this.active++;
+    //   }
+    // },
   },
-  //   mounted() {
-  //     let that = this;
-  //     setInterval(() => {
-  //       that.next();
-  //     }, 3000);
-  //   },
+  created() {
+    const db = firebase.firestore();
+    const dbGalleries = db.collection("gallery");
+    dbGalleries.get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+
+        const gallery = {
+          image: data.image ? data.image : "",
+          imageTitle: data.imageTitle ? data.imageTitle : "",
+          credit: data.credit ? data.credit : "",
+        };
+
+        this.galleries.push(gallery);
+      });
+    });
+  },
 };
 </script>
 
@@ -197,7 +99,7 @@ export default {
 .gallery {
   width: 1000px;
   height: 1550px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
 }
 
 /* .biolet {
