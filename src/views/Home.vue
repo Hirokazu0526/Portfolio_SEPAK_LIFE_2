@@ -8,8 +8,9 @@
 
       <p>
         Vue Routerのプラグインを利用しコンポーネントのルーティングを実装。<br />
-        Galleryコンポーネントではモーダルやカルーセルスライダーを実装し、<br />
-        選択した画像と紐付けて操作を行える様にしました。<br />
+        GalleryコンポーネントではFirebaseのFirestoreとStorageを利用。※2021/03/18機能追加<br />
+        Authenticationを利用したログイン認証を実装し、上記サービスへのデータの格納、<br />
+        保存したデータをGalleryコンポーネントにて表示しております。※2021/03/18機能追加<br />
         レスポンシブに対応している他、vue-gtagのプラグインを利用しGoogleAnalyticsの設定をしております。
       </p>
       <br />
@@ -35,7 +36,7 @@ export default {
 <style scoped>
 .home {
   width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
 }
 
 h2,
