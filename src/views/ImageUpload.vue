@@ -133,6 +133,7 @@ h2 {
   margin-bottom: 16px;
   box-shadow: 1px 1px 4px 1px rgb(218, 218, 218);
   color: #333;
+  background: #fff;
 }
 
 .preview-image {
