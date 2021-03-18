@@ -36,6 +36,7 @@
         <router-view />
       </transition>
     </div>
+    <!-- <router-link to="/imageupload">ImageUpload</router-link> -->
     <Footer />
   </div>
 </template>
