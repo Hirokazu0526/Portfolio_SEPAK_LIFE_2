@@ -1,36 +1,38 @@
 <template>
-  <div class="image-entry">
-    <h2>画像登録</h2>
-    <div v-if="gallery.image">
-      <img class="preview-image" :src="gallery.image" alt="" />
-    </div>
-    <div class="entry-input-row">
-      <span class="enrty-label">画像</span
-      ><input v-if="reset" @change="upload" type="file" />
-    </div>
-    <div class="entry-input-row">
-      <span class="enrty-label">タイトル</span
-      ><input type="text" v-model="gallery.imageTitle" />
-    </div>
-    <div class="entry-input-row">
-      <span class="enrty-label">クレジット</span>
-      <input type="text" v-model="gallery.credit" />
-    </div>
-    <div>
-      <button class="entry-btn" @click="entryGallery()">登録</button>
-    </div>
+  <div class="imageupload">
+    <div class="image-entry">
+      <h2>画像登録</h2>
+      <div v-if="gallery.image">
+        <img class="preview-image" :src="gallery.image" alt="" />
+      </div>
+      <div class="entry-input-row">
+        <span class="enrty-label">画像</span
+        ><input v-if="reset" @change="upload" type="file" />
+      </div>
+      <div class="entry-input-row">
+        <span class="enrty-label">タイトル</span
+        ><input type="text" v-model="gallery.imageTitle" />
+      </div>
+      <div class="entry-input-row">
+        <span class="enrty-label">クレジット</span>
+        <input type="text" v-model="gallery.credit" />
+      </div>
+      <div>
+        <button class="entry-btn" @click="entryGallery()">登録</button>
+      </div>
 
-    <div class="message">
-      <div v-if="entryDocId">
-        FirestoreにDocId:{{ entryDocId }}で登録しました。
+      <div class="message">
+        <div v-if="entryDocId">
+          FirestoreにDocId:{{ entryDocId }}で登録しました。
+        </div>
+        <div v-if="errorMessage">
+          エラーメッセージ:
+          {{ errorMessage }}
+        </div>
       </div>
-      <div v-if="errorMessage">
-        エラーメッセージ:
-        {{ errorMessage }}
-      </div>
+      <br />
+      <button @click="logOut">Logout</button>
     </div>
-    <br />
-    <button @click="logOut">Logout</button>
   </div>
 </template>
 
@@ -153,11 +155,11 @@ h2 {
 }
 
 input[type="text"] {
-  width: 400px;
+  width: 200px;
   font-size: 18px;
 }
 textarea {
-  width: 400px;
+  width: 200px;
   font-size: 18px;
 }
 
@@ -178,5 +180,15 @@ textarea {
 .message {
   margin: 12px;
   padding: 12px;
+}
+
+@media screen and (max-width: 599px) {
+  .imageupload {
+    width: 100%;
+  }
+
+  .image-entry {
+    width: 80%;
+  }
 }
 </style>

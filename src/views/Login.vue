@@ -45,4 +45,9 @@ export default {
 .login-box {
   margin: 20px 0;
 }
+@media screen and (max-width: 599px) {
+  .login {
+    width: 100%;
+  }
+}
 </style>
