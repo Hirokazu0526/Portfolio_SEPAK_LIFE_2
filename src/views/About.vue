@@ -88,7 +88,7 @@ export default {
 .about {
   color: #1c273e;
   width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 80px;
 }
 /* .pink {
   color: #ff04ff;

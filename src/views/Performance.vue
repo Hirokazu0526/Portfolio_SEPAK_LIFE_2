@@ -112,7 +112,7 @@ export default {
 .performance {
   width: 1000px;
   height: 2280px;
-  margin: 0 auto;
+  margin: 0 auto 80px;
 }
 /* .yellow {
   color: #adff2e;
